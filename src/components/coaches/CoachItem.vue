@@ -1,7 +1,7 @@
 <template>
   <li>
     <h3>{{ fullName }}</h3>
-    <h4>{{ rate }}€/hour</h4>
+    <h4>{{ rate }} €/hour</h4>
     <div>
       <base-badge v-for="area in areas" :key="area" :type="area" :title="area"></base-badge>
     </div>
