@@ -8,7 +8,7 @@
         <request-item
           v-for="req in receivedRequests"
           :key="req.id"
-          :email="userEmail"
+          :email="req.userEmail"
           :message="req.message"
         ></request-item>
       </ul>
@@ -29,7 +29,8 @@ export default {
       return this.$store.getters['requests/requests'];
     },
     hasRequests() {
-      return this.$store.getters['requests/hasRequest'];
+      console.log(this.$store.getters['requests/hasRequests'])
+      return this.$store.getters['requests/hasRequests'];
     },
   },
 };
