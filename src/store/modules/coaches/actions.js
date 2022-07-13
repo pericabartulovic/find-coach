@@ -31,11 +31,13 @@ export default {
   },
   async loadCoaches(context) {
     const response = await fetch(
+      // http://www.deelay.me/2000/
       `https://vue-http-demo-2-aa466-default-rtdb.europe-west1.firebasedatabase.app/coaches.json`
     );
     const responseData = await response.json();
     if (!response.ok) {
-      console.error('Nešto nije dobro')
+      const error = new Error(responseData.message || 'Failed to fetch');
+      throw error;
     }
     
     const coaches = [];
