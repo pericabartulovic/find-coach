@@ -6,6 +6,7 @@ export default {
   namespaced: true,      //to make sure that multiple modules are clearly separated from each other (and to avoid name clashes)
   state() {
     return {
+      lastFatch: null,
       coaches: [
         {
           id: 'c1',
