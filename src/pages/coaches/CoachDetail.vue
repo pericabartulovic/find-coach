@@ -10,7 +10,7 @@
       <base-card>
         <header>
           <h2>Interested? Reach out now!</h2>
-          <!-- <base-button link :to="contactLink">Contact</base-button> ovaj gumb tu nema nikakvu funkciju  -->
+          <base-button link :to="contactLink">Contact</base-button> 
         </header>
         <router-view></router-view>
       </base-card>
@@ -51,7 +51,7 @@ export default {
       return this.selectedCoach.description;
     },
     contactLink() {
-      return this.$route.path + '/' + this.id + '/contact';
+      return this.$route.path + '/contact';
     },
   },
   created() {

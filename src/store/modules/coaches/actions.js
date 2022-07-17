@@ -9,9 +9,11 @@ export default {
       hourlyRate: data.rate,
       areas: data.areas,
     };
-
+    
+    const token = context.rootGetters.token;
+    
     const response = await fetch(
-      `https://vue-http-demo-2-aa466-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json`,
+      `https://vue-http-demo-2-aa466-default-rtdb.europe-west1.firebasedatabase.app/coaches/${userId}.json?auth=${token}`,  //samo s ? na kraju bez auth stavlja token off
       {
         method: 'PUT',
         body: JSON.stringify(coachData),
